@@ -1,0 +1,32 @@
+package W10;
+import java.util.Scanner;
+public class W10_04_titleStatus{
+    public static void main(String[] args){
+        Scanner kb = new Scanner(System.in);
+        System.out.print("ระบุเพศ (male/female): ");
+        String gender = kb.next();
+
+        System.out.print("ระบุอายุ: ");
+        int age = kb.nextInt();
+
+        System.out.print("สถานะสมรส (single/married): ");
+        String isMarried = kb.next();
+
+        if(gender.equalsIgnoreCase("male")){
+            if(age < 15){
+                System.out.print("เด็กชาย");
+            }else{
+                System.out.print("นาย");
+            }
+
+        }else{
+            if(age < 15){
+                System.out.print("เด็กหญิง");
+            }else if(isMarried.equalsIgnoreCase("married")){
+                System.out.print("นาง");
+            }else{
+                 System.out.print("นางสาว");
+            }
+        }
+    }
+}
